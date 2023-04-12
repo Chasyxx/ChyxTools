@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script type="module" src="script.js"></script>
+        <style>
+            body {
+                font-family: monospace;
+                background-color: black;
+                color: lime;
+            }
+            smallGroup, .small {
+                height: 32px
+            }
+            tallGroup, .tall {
+                height: 128px
+            }
+            textarea {
+                width: 50%;
+                resize: none;
+                font-family: monospace;
+                font-size: larger;
+                background-image: linear-gradient(to bottom, black, green);
+                color: azure;
+            }
+            * :disabled{
+                background-image: linear-gradient(to bottom, lime, green);
+                color: black;
+            }
+            flex {
+                display: flex;
+            }
+            flexGrow ::content, .flexGrow {
+                flex-grow: true !important;
+            }
+            #logo {
+                width: 100%;
+                height: 33%
+            }
+            .output {
+                padding: 7px 4px 9px 4px;
+            }
+            #splash {
+                background-color: beige;
+                color: #009999;
+                font-size: xx-large;
+            }
+            button {
+                background-image: linear-gradient(to bottom, green, #004000);
+                color: lime;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="logo" width="1024" height="128"></canvas>
+        <h1 align="center">Wurstcaptures URL decoder</h1><h2 align="center">Can't access /music/ on that server? Put the link here and get your bytebeat code and rate!</h2>
+        <flex class="tall">
+            <textarea id="in0" class="flexGrow">Input</textarea>
+            <button onclick="script(0)">Generate</button>
+            <textarea class="flexGrow" id="out0" disabled>Output</textarea>
+            <button onclick="copy(0)">Copy<br>Output</button></flex>
+        <h1 align="center">Entropedia URL decoder</h1><h2 align="center">This player no longer recongizes it's old link format found on the pouet threads. Let's fix that! Put your link in!</h2>
+        <flex class="tall">
+            <textarea id="in1" class="flexGrow">Input</textarea>
+            <button onclick="script(1)">Generate</button>
+            <textarea class="flexGrow" id="out1" disabled>Output</textarea>
+            <button onclick="copy(1)">Copy<br>Output</button></flex>
+        <br><br>
+    </body>
+</html>
