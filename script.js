@@ -7,7 +7,7 @@ function drawArrayToCanvas(arr, Elem='logo') {
     for (let i = 0; i < arr.length; i++) {
         const cellSizeX = canvas.width / arr[i].length;
         for (let j = 0; j < arr[i].length; j++) {
-            const color = arr[i][j] === "|" ? '#00FF00' : '#000000'; // Set color based on 0 or 1
+            const color = arr[i][j] === "|" ? `#00${((Math.random()*127)|128).toString(16)}00` : '#000000'; // Set color based on 0 or 1
             const x = j * cellSizeX;
             const y = i * cellSizeY;
 
